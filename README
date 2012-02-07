@@ -1,0 +1,22 @@
+== Rectangles
+Program that counts area of two covering squares which user specifies in prompt input.
+
+=== Usage
+   ~Rectangles/bin> ruby rectangles
+
+=== Testing
+   ~Rectangles/test> ruby rectangles_test_suite.rb
+
+=== Input
+	Zadejte delku hrany prvniho ctverce: 4
+	Zadejte x-ovou souradnici stredu prvniho ctverce: 0
+	Zadejte y-ovou souradnici stredu prvniho ctverce: 0
+	Zadejte delku hrany druheho ctverce: 2
+	Zadejte x-ovou souradnici stredu druheho ctverce: 2
+	Zadejte y-ovou souradnici stredu druheho ctverce: 2
+
+=== Output
+	Obsah sjednoceni dvou ctvercu je 19.
+
+=== RDoc generation
+    rdoc lib README
