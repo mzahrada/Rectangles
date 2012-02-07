@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=CP852" http-equiv="Content-Type">
+
+<title>Class: Rectangles::Rectangle</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/rectangles/rectangle.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-c-new_square_using_midpoint">::new_square_using_midpoint</a>
+    
+    <li><a href="#method-i-get_overlapping_rectangle">#get_overlapping_rectangle</a>
+    
+    <li><a href="#method-i-to_s">#to_s</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../README.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Rectangles.html">Rectangles</a>
+  
+    <li><a href="../Rectangles/AreaCalc.html">Rectangles::AreaCalc</a>
+  
+    <li><a href="../Rectangles/InputHandler.html">Rectangles::InputHandler</a>
+  
+    <li><a href="../Rectangles/NoOverlapError.html">Rectangles::NoOverlapError</a>
+  
+    <li><a href="../Rectangles/NotRectangleError.html">Rectangles::NotRectangleError</a>
+  
+    <li><a href="../Rectangles/Rectangle.html">Rectangles::Rectangle</a>
+  
+    <li><a href="../Rectangles/Runner.html">Rectangles::Runner</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Rectangles::Rectangle</h1>
+
+  <div id="description" class="description">
+    
+<p>Data object which represents 2D shape rectangle.</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="NOT_RECTANGLE_TEXT">NOT_RECTANGLE_TEXT
+        
+        <dd class="description"><p>Error message raised when rectangle cannot be created cos its coordinates
+are wrong.</p>
+        
+      
+        <dt id="NO_OVERLAP_TEXT">NO_OVERLAP_TEXT
+        
+        <dd class="description"><p>Error message raised when squares do not overlap.</p>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-area" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">area</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p><a href="../Rectangles.html">Rectangles</a> area.</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-bottom" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">bottom</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p><a href="Rectangle.html">Rectangle</a> is represented by positions of
+sides.</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-left" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">left</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p><a href="Rectangle.html">Rectangle</a> is represented by positions of
+sides.</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-right" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">right</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p><a href="Rectangle.html">Rectangle</a> is represented by positions of
+sides.</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-top" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">top</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p><a href="Rectangle.html">Rectangle</a> is represented by positions of
+sides.</p>
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(top,bottom,left,right)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates new <a href="Rectangle.html">Rectangle</a> object using sides and
+calculates its area.</p>
+<hr style="height: 1px">
+<ul><li><dl class="rdoc-list note-list"><dt>Args
+<dd></dd></dl>
+<ul><li>
+<p><em>top</em> top side</p>
+</li><li>
+<p><em>bottom</em> bottom side</p>
+</li><li>
+<p><em>left</em> left side</p>
+</li><li>
+<p><em>right</em> right side</p>
+</li></ul>
+</li><li><dl class="rdoc-list note-list"><dt>Raises
+<dd></dd></dl>
+<ul><li>
+<p><em><a href="NotRectangleError.html">NotRectangleError</a></em> when given
+sides do not create rectangle</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/rectangles/rectangle.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">top</span>,<span class="ruby-identifier">bottom</span>,<span class="ruby-identifier">left</span>,<span class="ruby-identifier">right</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotRectangleError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">NOT_RECTANGLE_TEXT</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">top</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">bottom</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">left</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">right</span>
+  <span class="ruby-ivar">@area</span> = (<span class="ruby-identifier">top</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">bottom</span>) * (<span class="ruby-identifier">right</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">left</span>)
+  <span class="ruby-ivar">@top</span> = <span class="ruby-identifier">top</span>
+  <span class="ruby-ivar">@bottom</span> = <span class="ruby-identifier">bottom</span>
+  <span class="ruby-ivar">@left</span> = <span class="ruby-identifier">left</span>
+  <span class="ruby-ivar">@right</span> = <span class="ruby-identifier">right</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+      <div id="method-c-new_square_using_midpoint" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new_square_using_midpoint</span><span
+            class="method-args">(mid_x, mid_y, side_length)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates new <a href="Rectangle.html">Rectangle</a> object using midpoint
+<em>x</em> and <em>y</em> coordinate and <em>side_length</em>.</p>
+<hr style="height: 1px">
+<ul><li><dl class="rdoc-list note-list"><dt>Args
+<dd></dd></dl>
+<ul><li>
+<p><em>mid_x</em> x coordinate of midpoint</p>
+</li><li>
+<p><em>mid_y</em> y coordinate of midpoint</p>
+</li><li>
+<p><em>side_length</em> side length</p>
+</li></ul>
+</li><li><dl class="rdoc-list note-list"><dt>Returns
+<dd></dd></dl>
+<ul><li>
+<p>new <em><a href="Rectangle.html">Rectangle</a></em> object</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="new_square_using_midpoint-source">
+            <pre><span class="ruby-comment"># File lib/rectangles/rectangle.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new_square_using_midpoint</span>(<span class="ruby-identifier">mid_x</span>, <span class="ruby-identifier">mid_y</span>, <span class="ruby-identifier">side_length</span>)
+  <span class="ruby-identifier">half</span> = <span class="ruby-identifier">side_length</span><span class="ruby-operator">/</span><span class="ruby-value">2.0</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-identifier">mid_y</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">half</span>
+  <span class="ruby-identifier">b</span> = <span class="ruby-identifier">mid_y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">half</span>
+  <span class="ruby-identifier">l</span> = <span class="ruby-identifier">mid_x</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">half</span>
+  <span class="ruby-identifier">r</span> = <span class="ruby-identifier">mid_x</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">half</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Rectangle</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">t</span>,<span class="ruby-identifier">b</span>,<span class="ruby-identifier">l</span>,<span class="ruby-identifier">r</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new_square_using_midpoint-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new_square_using_midpoint-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-get_overlapping_rectangle" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_overlapping_rectangle</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates new overlapping <a href="Rectangle.html">Rectangle</a> between
+<em>this</em> and <em>other</em> <a href="Rectangle.html">Rectangle</a>.</p>
+<ul><li><dl class="rdoc-list note-list"><dt>Args
+<dd></dd></dl>
+<ul><li>
+<p><em>other</em> other <a href="Rectangle.html">Rectangle</a> to be compared</p>
+</li></ul>
+</li><li><dl class="rdoc-list note-list"><dt>Raises
+<dd></dd></dl>
+<ul><li>
+<p><em><a href="NoOverlapError.html">NoOverlapError</a></em> if rectangles do
+not overlap</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="get_overlapping_rectangle-source">
+            <pre><span class="ruby-comment"># File lib/rectangles/rectangle.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_overlapping_rectangle</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@top</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">bottom</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@bottom</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">top</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@right</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">left</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@left</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">right</span>)
+    <span class="ruby-identifier">t</span> = [<span class="ruby-ivar">@top</span>,<span class="ruby-identifier">other</span>.<span class="ruby-identifier">top</span>].<span class="ruby-identifier">min</span>
+    <span class="ruby-identifier">b</span> = [<span class="ruby-ivar">@bottom</span>,<span class="ruby-identifier">other</span>.<span class="ruby-identifier">bottom</span>].<span class="ruby-identifier">max</span>
+    <span class="ruby-identifier">l</span> = [<span class="ruby-ivar">@left</span>,<span class="ruby-identifier">other</span>.<span class="ruby-identifier">left</span>].<span class="ruby-identifier">max</span>
+    <span class="ruby-identifier">r</span> = [<span class="ruby-ivar">@right</span>,<span class="ruby-identifier">other</span>.<span class="ruby-identifier">right</span>].<span class="ruby-identifier">min</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">Rectangle</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">t</span>,<span class="ruby-identifier">b</span>,<span class="ruby-identifier">l</span>,<span class="ruby-identifier">r</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">NoOverlapError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">NO_OVERLAP_TEXT</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_overlapping_rectangle-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_overlapping_rectangle-method -->
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File lib/rectangles/rectangle.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;[top: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@top</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;, bottom: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@bottom</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;, left: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@left</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;, right: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@right</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;, area: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@area</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;]&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_s-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_s-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.10.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
